@@ -1,8 +1,10 @@
 import { useParams } from "react-router-dom"
+import { useEvent } from '../context/EventContext'
 
-export default function EventDetail({ events }) {
+export default function EventDetail() {
     const { id } = useParams()
-    const event = events.find(ev => ev.id == id)
+    const {events} = useEvent()
+    const event = events.find(ev => ev._id === id)
     if (!event) return <p>Event not found</p>
     return (
         <div className="event">

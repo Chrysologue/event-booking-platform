@@ -4,9 +4,16 @@ const app = express();
 const userRoute = require('./routes/user.route');
 const eventRoute = require('./routes/event.route');
 const registrationRoute = require('./routes/register.route');
+const cors = require("cors")
+
+app.use(cors({
+  origin: "http://localhost:5173",
+  credentials: true
+}))
 
 app.use(express.json());
 app.use(cookieParser());
+
 app.use('/api/auth', userRoute);
 app.use('/api', eventRoute);
 app.use('/api/registrations', registrationRoute);
