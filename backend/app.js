@@ -2,10 +2,14 @@ const express = require('express');
 const cookieParser = require('cookie-parser');
 const app = express();
 const userRoute = require('./routes/user.route');
+const eventRoute = require('./routes/event.route');
+const registrationRoute = require('./routes/register.route');
 
 app.use(express.json());
 app.use(cookieParser());
 app.use('/api/auth', userRoute);
+app.use('/api', eventRoute);
+app.use('/api/registrations', registrationRoute);
 
 app.get('/', (req, res) => {
   res.status(200).json('This is Event Booking Platform Backend');

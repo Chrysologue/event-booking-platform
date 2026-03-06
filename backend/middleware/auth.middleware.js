@@ -1,8 +1,6 @@
 const Auth = {};
 const jwt = require('jsonwebtoken');
-const bcrypt = require('bcryptjs');
 require('dotenv').config();
-const User = require('../models/User');
 
 
 Auth.verifyUser = async function (req, res, next) {

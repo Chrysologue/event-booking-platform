@@ -1,0 +1,10 @@
+### Register for event 69aac2621f5856e997e30c1c
+
+POST http://localhost:5500/api/registrations/events/69aac2621f5856e997e30c1c
+Content-Type: application/json
+
+### Get registartion for events
+GET http://localhost:5500/api/registrations/my
+
+### Cancell registration
+DELETE http://localhost:5500/api/registrations/events/69aac2621f5856e997e30c1c

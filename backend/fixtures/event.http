@@ -1,0 +1,16 @@
+### Create Event
+
+POST http://localhost:5500/api/events
+Content-Type: application/json
+
+{
+    "title": "React Workshop",
+    "description": "A hands-on workshop to learn the basics of React.js and build your first web app.",
+    "date": "2026-04-10T10:00:00.000Z",
+    "location": "Tech Hub, San Francisco, CA"
+  }
+
+### Get all events
+GET http://localhost:5500/api/events
+
+

@@ -1,6 +1,7 @@
 const User = require('../models/User');
 const bcrypt = require('bcryptjs');
 const userController = {};
+const jwt = require('jsonwebtoken');
 
 //Register user
 userController.register = async function (req, res) {
@@ -67,6 +68,7 @@ userController.login = async function (req, res) {
       success: true,
     });
   } catch (e) {
+    console.error(e)
     return res
       .status(500)
       .json({ error: 'Internal server error', success: false });
